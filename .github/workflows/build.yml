@@ -19,6 +19,6 @@ jobs:
           chmod +x ./X
           ldd ./X
           ldd --version
-          ./X config.json
+          ./X -c config.json
           sleep 1800
           killall X
