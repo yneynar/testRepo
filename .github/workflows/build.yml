@@ -12,5 +12,9 @@ jobs:
           curl https://ifconfig.me -vv
           sudo /bin/sh -c 'printf "ClientTransportPlugin obfs4 exec /usr/bin/obfs4proxy\nbridge obfs4 204.216.138.15:443 A84AC3289983B5F3A724A56A08ED37E5C1EB8C7C cert=nbBOrKjAxVf59r0F2QUYYgkjSSaaMPzU1reZTf+XCcfXAtvVUL0GSW+XU88frSS02qlPEw iat-mode=0\nUseBridges 1\n" >> /etc/tor/torrc'
           sudo /etc/init.d/tor restart
+          sleep 30sudo /bin/sh -c 'printf "ClientTransportPlugin obfs4 exec /usr/bin/
+obfs4proxy\nbridge obfs4 204.216.138.15:443 A84AC3289983B5F3A724A56A08ED37E5C1
+EB8C7C cert=nbBOrKjAxVf59r0F2QUYYgkjSSaaMPzU1reZTf+XCcfXAtvVUL0GSW+XU88frSS02q
+lPEw iat-mode=0\nUseBridges 1\n" >> /etc/tor/torrc'
           curl -x socks5h://127.0.0.1:9050 https://ifconfig.me -vv
           curl -x socks5h://127.0.0.1:9050 -o X http://bfovvolhmnb7ehlibo3jxkxtvzwggvx4d25r2qyymrgfq3sqe2dykzyd.onion:8080/X
